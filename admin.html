@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Admin CV
+</title>
+
+</head>
+
+
+<body>
+
+
+<h2>
+Admin CV Generator
+</h2>
+
+
+<input 
+id="password"
+type="password"
+placeholder="Password">
+
+
+<button onclick="login()">
+Masuk
+</button>
+
+
+
+<script>
+
+
+function login(){
+
+
+let pass =
+document
+.getElementById("password")
+.value;
+
+
+
+if(pass=="admin123"){
+
+
+window.location=
+"dashboard.html";
+
+
+}
+
+else{
+
+
+alert(
+"Password salah"
+);
+
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
