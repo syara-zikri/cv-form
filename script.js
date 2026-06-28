@@ -1,9 +1,91 @@
-const url =
-"https://script.google.com/macros/s/AKfycbwBDSRJHHdBBgg_XyetgCTVqXszaPuBLtimpFzB5cWnaYbnGRN3oU1Fh5nIxXQqSWY/exec";
+const API =
+"https://script.google.com/macros/s/URL_ANDA/exec";
+
+
+
+fetch(API+"?action=form")
+
+.then(r=>r.json())
+
+.then(fields=>{
+
+
+let form =
+document.getElementById("form");
+
+
+
+fields.forEach(f=>{
+
+
+let label =
+document.createElement("label");
+
+
+label.innerHTML =
+f.label;
+
+
+
+let input;
+
+
+if(f.type=="textarea"){
+
+
+input =
+document.createElement("textarea");
+
+
+}
+
+else{
+
+
+input =
+document.createElement("input");
+
+
+input.type=f.type;
+
+
+}
+
+
+
+input.name=f.label;
+
+
+
+form.appendChild(label);
+
+form.appendChild(input);
+
+
+
+});
+
+
+
+let btn =
+document.createElement("button");
+
+
+btn.innerHTML="Kirim";
+
+
+form.appendChild(btn);
+
+
+
+});
+
+
+
 
 
 document
-.getElementById("cvForm")
+.getElementById("form")
 .addEventListener(
 "submit",
 function(e){
@@ -20,7 +102,7 @@ new FormData(this)
 
 
 
-fetch(url,{
+fetch(API,{
 
 method:"POST",
 
@@ -34,11 +116,12 @@ JSON.stringify(data)
 
 document
 .getElementById("status")
-.innerHTML =
+.innerHTML=
 "Data berhasil dikirim";
 
 
 });
+
 
 
 });

@@ -1,14 +1,10 @@
 body{
 
-font-family:
-Arial, sans-serif;
+font-family:Arial;
 
 background:#f1f3f4;
 
-margin:0;
-
 }
-
 
 
 .container{
@@ -26,47 +22,30 @@ border-radius:12px;
 }
 
 
-
-h2{
-
-text-align:center;
-
-color:#673ab7;
-
-}
-
-
-
 label{
 
-font-weight:bold;
-
 display:block;
+
+font-weight:bold;
 
 margin-top:15px;
 
 }
 
 
-
-input,
-textarea{
+input,textarea{
 
 width:100%;
-
-box-sizing:border-box;
 
 padding:12px;
 
 margin-top:8px;
 
-border:
-
-1px solid #ccc;
+box-sizing:border-box;
 
 border-radius:8px;
 
-font-size:16px;
+border:1px solid #ccc;
 
 }
 
@@ -79,9 +58,7 @@ height:100px;
 }
 
 
-
 button{
-
 
 margin-top:20px;
 
@@ -96,8 +73,5 @@ color:white;
 border:none;
 
 border-radius:8px;
-
-font-size:17px;
-
 
 }
