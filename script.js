@@ -1,11 +1,15 @@
 const API =
-"https://script.google.com/macros/s/URL_ANDA/exec";
+"https://script.google.com/macros/s/AKfycbwBDSRJHHdBBgg_XyetgCTVqXszaPuBLtimpFzB5cWnaYbnGRN3oU1Fh5nIxXQqSWY/exec";
 
+
+window.onload=function(){
 
 
 fetch(API+"?action=form")
 
-.then(r=>r.json())
+
+.then(response=>response.json())
+
 
 .then(fields=>{
 
@@ -22,8 +26,7 @@ let label =
 document.createElement("label");
 
 
-label.innerHTML =
-f.label;
+label.innerHTML=f.label;
 
 
 
@@ -33,17 +36,13 @@ let input;
 if(f.type=="textarea"){
 
 
-input =
-document.createElement("textarea");
+input=document.createElement("textarea");
 
 
-}
-
-else{
+}else{
 
 
-input =
-document.createElement("input");
+input=document.createElement("input");
 
 
 input.type=f.type;
@@ -62,66 +61,33 @@ form.appendChild(label);
 form.appendChild(input);
 
 
-
 });
 
 
 
-let btn =
+let button =
 document.createElement("button");
 
 
-btn.innerHTML="Kirim";
+button.innerHTML="Kirim";
 
 
-form.appendChild(btn);
+form.appendChild(button);
 
 
-
-});
-
-
-
-
-
-document
-.getElementById("form")
-.addEventListener(
-"submit",
-function(e){
-
-
-e.preventDefault();
-
-
-
-let data =
-Object.fromEntries(
-new FormData(this)
-);
-
-
-
-fetch(API,{
-
-method:"POST",
-
-body:
-JSON.stringify(data)
 
 })
 
-.then(()=>{
+
+.catch(error=>{
 
 
-document
-.getElementById("status")
-.innerHTML=
-"Data berhasil dikirim";
-
-
-});
-
+document.getElementById("form")
+.innerHTML =
+"Form gagal dimuat: "+error;
 
 
 });
+
+
+}
