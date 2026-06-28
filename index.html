@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 
 <title>
-Form CV
+Formulir CV
 </title>
 
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -17,60 +15,109 @@ href="style.css">
 <body>
 
 
-<div class="box">
+<div class="container">
 
 
-<h2>
-Form Data CV
-</h2>
+<h2>Formulir Data CV</h2>
+
+<p>
+Isi data dengan lengkap
+</p>
 
 
-<form id="form">
+
+<form id="cvForm">
 
 
-<input name="nama"
-placeholder="Nama Lengkap">
+
+<label>Nama Lengkap</label>
+<input name="nama" required>
 
 
-<input name="email"
-placeholder="Email">
+
+<label>Tempat, Tanggal Lahir</label>
+<input name="ttl">
 
 
-<input name="hp"
-placeholder="No HP">
+
+<label>Jenis Kelamin</label>
+<input name="gender">
 
 
-<textarea name="alamat"
-placeholder="Alamat">
-</textarea>
+
+<label>Alamat</label>
+<textarea name="alamat"></textarea>
 
 
-<textarea name="profil"
-placeholder="Profil">
-</textarea>
+
+<label>No WhatsApp</label>
+<input name="hp">
 
 
-<textarea name="pendidikan"
-placeholder="Pendidikan">
-</textarea>
+
+<label>Email</label>
+<input name="email">
 
 
-<textarea name="pengalaman"
-placeholder="Pengalaman">
-</textarea>
+
+<label>Foto Profil (Link)</label>
+<input name="foto">
 
 
-<textarea name="skill"
-placeholder="Skill">
-</textarea>
+
+<label>Tentang Saya</label>
+<textarea name="profil"></textarea>
 
 
-<button>
-Kirim
+
+<label>Pendidikan Terakhir</label>
+<textarea name="pendidikan"></textarea>
+
+
+
+<label>Pengalaman Kerja</label>
+<textarea name="pengalaman"></textarea>
+
+
+
+<label>Organisasi</label>
+<textarea name="organisasi"></textarea>
+
+
+
+<label>Sertifikat</label>
+<textarea name="sertifikat"></textarea>
+
+
+
+<label>Keahlian</label>
+<textarea name="skill"></textarea>
+
+
+
+<label>Bahasa</label>
+<textarea name="bahasa"></textarea>
+
+
+
+<label>Hobi</label>
+<textarea name="hobi"></textarea>
+
+
+
+<button type="submit">
+
+Kirim Data
+
 </button>
 
 
 </form>
+
+
+
+<p id="status"></p>
+
 
 
 </div>

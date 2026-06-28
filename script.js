@@ -1,9 +1,9 @@
 const url =
-"AKfycbxecZCfA75YFvGRUnTYolcBhCLVCRl6GvUAm_Jk7pQ6M1J0M94oVOWz6Fi_rnxDGQOL";
+"1strmT0mQJSb0QVCXb2I28Z1wb1XPttlXpaqBEL2sRXU";
 
 
 document
-.getElementById("form")
+.getElementById("cvForm")
 .addEventListener(
 "submit",
 function(e){
@@ -12,10 +12,12 @@ function(e){
 e.preventDefault();
 
 
+
 let data =
 Object.fromEntries(
 new FormData(this)
 );
+
 
 
 fetch(url,{
@@ -27,12 +29,13 @@ JSON.stringify(data)
 
 })
 
-
 .then(()=>{
 
-alert(
-"Data berhasil dikirim"
-);
+
+document
+.getElementById("status")
+.innerHTML =
+"Data berhasil dikirim";
 
 
 });
