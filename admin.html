@@ -5,8 +5,12 @@
 <head>
 
 <title>
-Admin CV
+Admin Builder
 </title>
+
+
+<link rel="stylesheet" href="style.css">
+
 
 </head>
 
@@ -14,64 +18,101 @@ Admin CV
 <body>
 
 
+<div class="container">
+
+
 <h2>
-Admin CV Generator
+Form Builder Admin
 </h2>
 
 
-<input 
-id="password"
-type="password"
-placeholder="Password">
+
+<label>
+Nama Pertanyaan
+</label>
 
 
-<button onclick="login()">
-Masuk
+<input id="label">
+
+
+
+<label>
+Tipe Jawaban
+</label>
+
+
+<select id="type">
+
+
+<option value="text">
+Text
+</option>
+
+
+<option value="textarea">
+Text Area
+</option>
+
+
+<option value="email">
+Email
+</option>
+
+
+</select>
+
+
+
+<label>
+Wajib?
+</label>
+
+
+<select id="required">
+
+
+<option>
+YA
+</option>
+
+
+<option>
+TIDAK
+</option>
+
+
+</select>
+
+
+
+
+<label>
+Urutan
+</label>
+
+
+<input id="order"
+type="number">
+
+
+
+<button onclick="simpan()">
+
+Tambah Pertanyaan
+
 </button>
 
 
-
-<script>
-
-
-function login(){
+<p id="hasil"></p>
 
 
-let pass =
-document
-.getElementById("password")
-.value;
+</div>
 
 
-
-if(pass=="admin123"){
-
-
-window.location=
-"dashboard.html";
-
-
-}
-
-else{
-
-
-alert(
-"Password salah"
-);
-
-
-}
-
-
-
-}
-
-
-
-</script>
+<script src="admin.js"></script>
 
 
 </body>
+
 
 </html>
